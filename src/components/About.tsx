@@ -15,7 +15,8 @@ const About = () => {
           I specialize in <b>LLM orchestration</b> and <b>Prompt Engineering</b>, 
           building intelligent systems that leverage <b>OpenAI integration</b> to automate 
           complex business logic and enhance user experiences. My expertise spans 
-          Reactive Forms, JWT authentication, and full-scale CI/CD, all while pushing the 
+          Reactive Forms, <b>Angular Signals</b>, JWT authentication, and full-scale CI/CD, 
+          all while pushing the 
           boundaries of what's possible with **AI-Integrated Web Applications**.
         </p>
       </div>

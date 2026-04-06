@@ -49,8 +49,8 @@ const Career = () => {
             <p>
               Leading frontend architecture for <b>MPWEB (MHK Market Prominence)</b>, 
               spearheading the integration of <b>Generative AI</b> into enterprise insurance 
-              workflows, and optimizing <b>LLM orchestration</b> within complex Angular 
-              (v8–21) ecosystems.
+              workflows, and optimizing <b>LLM orchestration</b> and <b>Angular Signals</b> 
+              within complex Angular (v8–21) ecosystems.
             </p>
           </div>
         </div>

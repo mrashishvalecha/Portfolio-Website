@@ -25,7 +25,7 @@ export const projects: Project[] = [
     shortTitle: "MHK / MPWEB",
     category: "AI-Integrated Enterprise Platform",
     description: "A comprehensive enterprise insurance platform (MPWEB) for the US market, leveraging Generative AI for automated compliance checks and LLM-driven member enrollment optimizations.",
-    tools: ["Angular 8-21", "OpenAI API", "Prompt Engineering", "Jenkins"],
+    tools: ["Angular 8-21", "Angular Signals", "OpenAI API", "Prompt Engineering", "Jenkins"],
     image: "/images/placeholder.webp",
   },
   {
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     shortTitle: "Australian Super",
     category: "Superannuation & AI Logic",
     description: "Digital transformation for Australia's largest superannuation fund, streamlining advisor workflows with AI-ready data processing and enterprise Angular components.",
-    tools: ["Angular v17", "Azure AI Service", "REST APIs", "Enterprise UI"],
+    tools: ["Angular v17", "Angular Signals", "Azure AI Service", "REST APIs", "Enterprise UI"],
     image: "/images/placeholder.webp",
   },
   {
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     shortTitle: "S&P Global / ISDA",
     category: "Financial Digitalization & AI",
     description: "Architected a high-security digitalization platform for S&P Global’s derivatives ecosystem, integrating ISDA Create with Counterparty Manager to automate multi-jurisdictional compliance and contract lifecycle management using enterprise Angular modules.",
-    tools: ["Angular 18", "RxJS", "D3.js", "Enterprise Security", "REST APIs"],
+    tools: ["Angular 18", "Angular Signals", "RxJS", "D3.js", "Enterprise Security", "REST APIs"],
     image: "/images/spglobal.png",
   }
 ];

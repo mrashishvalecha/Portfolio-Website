@@ -97,6 +97,7 @@ const WhatIDo = () => {
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Angular (v8-21)</div>
+                <div className="what-tags">Angular Signals</div>
                 <div className="what-tags">AI Interface Design</div>
                 <div className="what-tags">Reactive Forms</div>
                 <div className="what-tags">Prompt Integration</div>
