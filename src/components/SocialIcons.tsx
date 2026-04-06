@@ -1,5 +1,4 @@
 import {
-  FaGithub,
   FaInstagram,
   FaLinkedinIn,
   FaXTwitter,
@@ -59,11 +58,6 @@ const SocialIcons = () => {
   return (
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
-        <span>
-          <a href="https://github.com/mrashishvalecha" target="_blank">
-            <FaGithub />
-          </a>
-        </span>
         <span>
           <a href="https://www.linkedin.com/in/ashish-valecha/" target="_blank">
             <FaLinkedinIn />
