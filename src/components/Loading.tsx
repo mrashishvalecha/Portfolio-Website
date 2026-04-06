@@ -10,6 +10,19 @@ const Loading = ({ percent }: { percent: number }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
 
+  const systemMessages = [
+    "Refining interface components...",
+    "Syncing creative assets...",
+    "Optimizing experience flow...",
+    "Loading portfolio data...",
+    "Establishing neural connections...",
+    "Preparing the workspace...",
+    "Fine-tuning visual elements...",
+    "Interface Ready."
+  ];
+
+  const currentMsg = systemMessages[Math.min(Math.floor(percent / 14), systemMessages.length - 1)];
+
   if (percent >= 100) {
     setTimeout(() => {
       setLoaded(true);
@@ -44,44 +57,59 @@ const Loading = ({ percent }: { percent: number }) => {
 
   return (
     <>
-      <div className="loading-header">
-        <a href="/#" className="loader-title" data-cursor="disable">
-          Ashish
-        </a>
-        <div className={`loaderGame ${clicked && "loader-out"}`}>
-          <div className="loaderGame-container">
-            <div className="loaderGame-in">
-              {[...Array(27)].map((_, index) => (
-                <div className="loaderGame-line" key={index}></div>
-              ))}
-            </div>
-            <div className="loaderGame-ball"></div>
+      <div className="loading-screen ai-core-theme">
+        <div className="ambient-orbs">
+          <div className="orb orb-1"></div>
+          <div className="orb orb-2"></div>
+        </div>
+
+        <div className="loading-header">
+          <div className="loader-title-wrap">
+            <a href="/#" className="loader-title" data-cursor="disable">
+              Ashish Valecha
+            </a>
+          </div>
+          <div className={`loader-status ${clicked && "loader-out"}`}>
+            <span className="status-percent">{percent}%</span>
           </div>
         </div>
-      </div>
-      <div className="loading-screen">
+
         <div className="loading-marquee">
-          <Marquee>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
+          <Marquee speed={25} gradient={false}>
+            {[...Array(5)].map((_, i) => (
+              <span key={i}> INNOVATION • CREATIVITY • PRECISION • TECHNOLOGY • DESIGN •</span>
+            ))}
           </Marquee>
         </div>
+
         <div
           className={`loading-wrap ${clicked && "loading-clicked"}`}
           onMouseMove={(e) => handleMouseMove(e)}
         >
-          <div className="loading-hover"></div>
-          <div className={`loading-button ${loaded && "loading-complete"}`}>
-            <div className="loading-container">
-              <div className="loading-content">
-                <div className="loading-content-in">
-                  Loading <span>{percent}%</span>
+          <div className="loading-glass-card">
+            <div className="card-corners">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            
+            <div className={`loading-button ${loaded && "loading-complete"}`}>
+              <div className="loading-container">
+                <div className="loading-content">
+                  <div className="loading-content-in">
+                    <div className="system-log">
+                      <span className="log-msg">{currentMsg}</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="loading-progress-bar">
+                  <div
+                    className="loading-progress-fill"
+                    style={{ width: `${percent}%` }}
+                  ></div>
                 </div>
               </div>
-              <div className="loading-box"></div>
-            </div>
-            <div className="loading-content2">
-              <span>Welcome</span>
+              <div className="loading-content2">
+                <span className="entry-text">Launch Experience</span>
+              </div>
             </div>
           </div>
         </div>
