@@ -15,43 +15,42 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Software Developer</h4>
+                <h5>Firmwise Services India Pvt. Ltd.</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2019 - 2019</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Started my professional journey, building frontend foundations and
+              contributing to web-based commercial applications.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Software Developer</h4>
+                <h5>TecOrb Technologies Pvt. Ltd.</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2019 - 2021</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Developed various web applications including real-time tracking
+              solutions and e-commerce platforms using Angular and modern JavaScript.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Senior Software Developer</h4>
+                <h5>PureSoftware</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2021 - PRESENT</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Leading frontend architecture for <b>MPWEB (MHK Market Prominence)</b>, 
+              spearheading the integration of <b>Generative AI</b> into enterprise insurance 
+              workflows, and optimizing <b>LLM orchestration</b> within complex Angular 
+              (v8–21) ecosystems.
             </p>
           </div>
         </div>

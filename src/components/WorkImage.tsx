@@ -2,7 +2,8 @@ import { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
 interface Props {
-  image: string;
+  image?: string;
+  shortTitle?: string;
   alt?: string;
   video?: string;
   link?: string;
@@ -11,6 +12,7 @@ interface Props {
 const WorkImage = (props: Props) => {
   const [isVideo, setIsVideo] = useState(false);
   const [video, setVideo] = useState("");
+
   const handleMouseEnter = async () => {
     if (props.video) {
       setIsVideo(true);
@@ -36,7 +38,13 @@ const WorkImage = (props: Props) => {
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
+        {props.shortTitle ? (
+          <div className="work-text-card">
+            <span>{props.shortTitle}</span>
+          </div>
+        ) : (
+          <img src={props.image} alt={props.alt} />
+        )}
         {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
       </a>
     </div>

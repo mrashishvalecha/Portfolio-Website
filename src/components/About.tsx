@@ -6,9 +6,15 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          7+ years of IT experience specializing in <b>AI-Powered Frontend Architecture</b> and 
+          enterprise Angular platforms. Presently associated with <b>PureSoftware</b> as a 
+          Senior Software Developer, lead-engineering the <b>MPWEB</b> platform by merging 
+          <b>Angular (v8–21)</b> with cutting-edge <b>Generative AI</b> solutions. 
+          I specialize in <b>LLM orchestration</b> and <b>Prompt Engineering</b>, 
+          building intelligent systems that leverage <b>OpenAI integration</b> to automate 
+          complex business logic and enhance user experiences. My expertise spans 
+          Reactive Forms, JWT authentication, and full-scale CI/CD, all while pushing the 
+          boundaries of what's possible with **AI-Integrated Web Applications**.
         </p>
       </div>
     </div>

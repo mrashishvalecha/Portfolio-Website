@@ -4,11 +4,12 @@ import Career from "./Career";
 import Contact from "./Contact";
 import Cursor from "./Cursor";
 import Landing from "./Landing";
-import Navbar from "./Navbar";
+import Navbar, { smoother } from "./Navbar";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
+import { initLenis } from "./utils/lenis";
 
 const TechStack = lazy(() => import("./TechStack"));
 
@@ -16,6 +17,15 @@ const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
     window.innerWidth > 1024
   );
+
+  useEffect(() => {
+    const lenis = initLenis();
+    smoother.scrollTo = (target: any) => lenis.scrollTo(target);
+    smoother.paused = (isPaused: boolean) => (isPaused ? lenis.stop() : lenis.start());
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   useEffect(() => {
     const resizeHandler = () => {
