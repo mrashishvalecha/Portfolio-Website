@@ -134,18 +134,3 @@ body {
     font-size: 40px;
   }
 }
-
-/* Section Loader for Suspense Fallbacks */
-.section-loader {
-  width: 100%;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--accentColor);
-  opacity: 0.5;
-  font-family: "Geist Mono", monospace;
-}

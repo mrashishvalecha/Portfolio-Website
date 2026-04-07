@@ -1,16 +1,16 @@
 import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
+import About from "./About";
+import Career from "./Career";
+import Contact from "./Contact";
 import Cursor from "./Cursor";
 import Landing from "./Landing";
 import Navbar, { smoother } from "./Navbar";
 import SocialIcons from "./SocialIcons";
+import WhatIDo from "./WhatIDo";
+import Work from "./Work";
 import setSplitText from "./utils/splitText";
 import { initLenis } from "./utils/lenis";
 
-const About = lazy(() => import("./About"));
-const Career = lazy(() => import("./Career"));
-const Contact = lazy(() => import("./Contact"));
-const WhatIDo = lazy(() => import("./WhatIDo"));
-const Work = lazy(() => import("./Work"));
 const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
@@ -49,26 +49,16 @@ const MainContainer = ({ children }: PropsWithChildren) => {
         <div id="smooth-content">
           <div className="container-main">
             <Landing>{!isDesktopView && children}</Landing>
-            <Suspense fallback={<div className="section-loader">Establishing About...</div>}>
-              <About />
-            </Suspense>
-            <Suspense fallback={<div className="section-loader">Syncing Capabilities...</div>}>
-              <WhatIDo />
-            </Suspense>
-            <Suspense fallback={<div className="section-loader">Loading Career Path...</div>}>
-              <Career />
-            </Suspense>
-            <Suspense fallback={<div className="section-loader">Compiling Work...</div>}>
-              <Work />
-            </Suspense>
+            <About />
+            <WhatIDo />
+            <Career />
+            <Work />
             {isDesktopView && (
-              <Suspense fallback={<div className="section-loader">Initializing Tech Stack...</div>}>
+              <Suspense fallback={<div>Loading....</div>}>
                 <TechStack />
               </Suspense>
             )}
-            <Suspense fallback={<div className="section-loader">Opening Neural Uplink...</div>}>
-              <Contact />
-            </Suspense>
+            <Contact />
           </div>
         </div>
       </div>
