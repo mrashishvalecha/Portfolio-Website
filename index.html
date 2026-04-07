@@ -1,112 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ashish Valecha | Senior Frontend Developer | Angular Specialist</title>
-    <meta name="description" content="Portfolio of Ashish Valecha - Senior Frontend Developer and Angular Specialist. Exploring the intersection of design and technology." />
-    <meta name="keywords" content="Ashish Valecha, Frontend Developer, Angular Specialist, Web Development, Portfolio, UI/UX" />
-    <meta name="author" content="Ashish Valecha" />
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="/src/main.tsx" as="script" />
 
-    <style>
-      :root {
-        --bg-color: #06080f;
-        --accent-color: #0ea5e9;
-        --text-color: #f8f7ff;
-      }
-      body {
-        margin: 0;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        font-family: system-ui, -apple-system, sans-serif;
-      }
-      #root:empty {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        width: 100vw;
-        position: fixed;
-        background-color: var(--bg-color);
-        z-index: 9999;
-      }
-      .static-loader {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-      .static-logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        background: linear-gradient(135deg, #0ea5e9 0%, #c481ff 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: pulse 2s infinite ease-in-out;
-      }
-      .static-progress {
-        width: 200px;
-        height: 1px;
-        background: rgba(255, 255, 255, 0.1);
-        position: relative;
-        overflow: hidden;
-      }
-      .static-progress::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
-        animation: loading-bar 2s infinite linear;
-      }
-      @keyframes pulse {
-        0%, 100% { opacity: 0.8; transform: scale(0.98); }
-        50% { opacity: 1; transform: scale(1); }
-      }
-      @keyframes loading-bar {
-        0% { left: -100%; }
-        100% { left: 100%; }
-      }
-      .static-text {
-        font-size: 0.8rem;
-        letter-spacing: 1px;
-        opacity: 0.5;
-        text-transform: uppercase;
-      }
-    </style>
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ashishvalecha.com/" />
-    <meta property="og:title" content="Ashish Valecha | Senior Frontend Developer" />
-    <meta property="og:description" content="Portfolio of Ashish Valecha - Senior Frontend Developer and Angular Specialist." />
-    <meta property="og:image" content="https://ashishvalecha.com/og-image.png" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashish Valecha | Senior Frontend Developer | Angular Specialist</title>
+  <meta name="description"
+    content="Portfolio of Ashish Valecha - Senior Frontend Developer and Angular Specialist. Exploring the intersection of design and technology." />
+  <meta name="keywords"
+    content="Ashish Valecha, Frontend Developer, Angular Specialist, Web Development, Portfolio, UI/UX" />
+  <meta name="author" content="Ashish Valecha" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ashishvalecha.com/" />
-    <meta property="twitter:title" content="Ashish Valecha | Senior Frontend Developer" />
-    <meta property="twitter:description" content="Portfolio of Ashish Valecha - Senior Frontend Developer and Angular Specialist." />
-    <meta property="twitter:image" content="https://ashishvalecha.com/og-image.png" />
-  </head>
-  <body>
-    <div id="root">
-      <div class="static-loader">
-        <div class="static-logo">Ashish Valecha</div>
-        <div class="static-progress"></div>
-        <div class="static-text">Establishing Neural Connections...</div>
-      </div>
-    </div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ashishvalecha.com/" />
+  <meta property="og:title" content="Ashish Valecha | Senior Frontend Developer" />
+  <meta property="og:description"
+    content="Portfolio of Ashish Valecha - Senior Frontend Developer and Angular Specialist." />
+  <meta property="og:image" content="https://ashishvalecha.com/og-image.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://ashishvalecha.com/" />
+  <meta property="twitter:title" content="Ashish Valecha | Senior Frontend Developer" />
+  <meta property="twitter:description"
+    content="Portfolio of Ashish Valecha - Senior Frontend Developer and Angular Specialist." />
+  <meta property="twitter:image" content="https://ashishvalecha.com/og-image.png" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
