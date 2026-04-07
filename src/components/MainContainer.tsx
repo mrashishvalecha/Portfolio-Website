@@ -1,16 +1,16 @@
 import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
-import About from "./About";
-import Career from "./Career";
-import Contact from "./Contact";
 import Cursor from "./Cursor";
 import Landing from "./Landing";
 import Navbar, { smoother } from "./Navbar";
 import SocialIcons from "./SocialIcons";
-import WhatIDo from "./WhatIDo";
-import Work from "./Work";
 import setSplitText from "./utils/splitText";
 import { initLenis } from "./utils/lenis";
 
+const About = lazy(() => import("./About"));
+const Career = lazy(() => import("./Career"));
+const Contact = lazy(() => import("./Contact"));
+const WhatIDo = lazy(() => import("./WhatIDo"));
+const Work = lazy(() => import("./Work"));
 const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
@@ -49,16 +49,26 @@ const MainContainer = ({ children }: PropsWithChildren) => {
         <div id="smooth-content">
           <div className="container-main">
             <Landing>{!isDesktopView && children}</Landing>
-            <About />
-            <WhatIDo />
-            <Career />
-            <Work />
+            <Suspense fallback={<div className="section-loader">Loading About...</div>}>
+              <About />
+            </Suspense>
+            <Suspense fallback={<div className="section-loader">Loading What I Do...</div>}>
+              <WhatIDo />
+            </Suspense>
+            <Suspense fallback={<div className="section-loader">Loading Career...</div>}>
+              <Career />
+            </Suspense>
+            <Suspense fallback={<div className="section-loader">Loading Work...</div>}>
+              <Work />
+            </Suspense>
             {isDesktopView && (
-              <Suspense fallback={<div>Loading....</div>}>
+              <Suspense fallback={<div className="section-loader">Loading Tech Stack...</div>}>
                 <TechStack />
               </Suspense>
             )}
-            <Contact />
+            <Suspense fallback={<div className="section-loader">Loading Contact...</div>}>
+              <Contact />
+            </Suspense>
           </div>
         </div>
       </div>
